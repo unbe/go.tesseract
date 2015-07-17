@@ -84,6 +84,10 @@ func (t *Tess) Close() {
 	t.tba = nil
 }
 
+func (t *Tess) Handle() *C.TessBaseAPI {
+	return t.tba
+}
+
 /* void TessBaseAPIClear(TessBaseAPI* handle);
 
 Free up recognition results and any stored image data, without actually
